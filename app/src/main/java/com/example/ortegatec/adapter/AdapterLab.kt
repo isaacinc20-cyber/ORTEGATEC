@@ -11,7 +11,7 @@ class AdapterLab(
     private val accionAlClick: (Laboratorio) -> Unit
 ) : RecyclerView.Adapter<AdapterLab.SedeViewHolder>() {
 
-    inner class SedeViewHolder(val binding: ItemSedeBinding) :
+     class SedeViewHolder(val binding: ItemSedeBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SedeViewHolder {
