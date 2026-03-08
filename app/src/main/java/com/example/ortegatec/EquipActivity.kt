@@ -2,6 +2,7 @@ package com.example.ortegatec
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +29,7 @@ class EquipActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         labId = intent.getIntExtra("LAB_ID", -1)
+        Log.d("ORTEGATEC", "Cargando equipos para el laboratorio con ID: $labId")
         val labName = intent.getStringExtra("LAB_NAME") ?: "Equipos"
         
         supportActionBar?.title = labName

@@ -13,7 +13,7 @@ class AdapterEquip(
     private val alHacerClick: (Equipo) -> Unit
 ) : RecyclerView.Adapter<AdapterEquip.EquipoViewHolder>() {
 
-    inner class EquipoViewHolder(val binding: ItemEquipoBinding) :
+    class EquipoViewHolder(val binding: ItemEquipoBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EquipoViewHolder {
@@ -26,7 +26,7 @@ class AdapterEquip(
     override fun onBindViewHolder(holder: EquipoViewHolder, position: Int) {
         val equipo = listadoEquipos[position]
         holder.binding.txtNombreEquipo.text = equipo.nombre
-        holder.binding.txtEstadoEquipo.text = equipo.estado.name
+        holder.binding.txtEstadoEquipo.text = "Estado: ${equipo.estado.name}"
 
         val color = when (equipo.estado) {
             EstadoEquipo.OPERATIVO -> Color.parseColor("#2E7D32")
