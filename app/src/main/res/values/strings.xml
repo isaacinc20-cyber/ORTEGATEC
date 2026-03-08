@@ -8,4 +8,5 @@
     <string name="detalle_ingreso">Ingreso: %1$s</string>
     <string name="sin_observaciones">Sin observaciones adicionales registradas.</string>
     <string name="titulo_detalle">Detalle de Activo: %1$s</string>
+    <string name="version_app">Versión de Entrega Final 1.0 - ORTEGATEC</string>
 </resources>
